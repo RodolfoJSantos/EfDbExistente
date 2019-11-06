@@ -15,14 +15,16 @@ namespace Alura.Filmes.App
             {
                 contexto.LogSQLToConsole();
 
-                var atores = contexto.Atores
-                    .OrderBy(a => EF.Property<DateTime>(a, "last_update"))
-                    .Take(10);
+				var filme = contexto.Filmes
+					.Include(f => f.Atores)
+					.First();
 
-                foreach (var ator in atores)
-                {
-                    Console.WriteLine(ator + " - " + contexto.Entry(ator).Property("last_update").CurrentValue);
-                }
+				Console.WriteLine(filme);
+
+				foreach (var ator in filme.Atores)
+				{
+					Console.WriteLine(ator);
+				}
             }
         }
     }
