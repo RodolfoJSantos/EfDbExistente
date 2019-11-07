@@ -16,6 +16,13 @@ namespace Alura.Filmes.App.Negocio
 
 		public string UltimoNome { get; set; }
 
+        public IList<FilmeAtor> Filmografia { get; set; }
+
+        public Ator()
+        {
+            Filmografia = new List<FilmeAtor>();
+        }
+
         public override string ToString()
         {
             return $"Id: {Id}, Nome: {PrimeiroNome} {UltimoNome}";

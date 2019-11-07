@@ -17,13 +17,14 @@ namespace Alura.Filmes.App
 
 				var filme = contexto.Filmes
 					.Include(f => f.Atores)
+                    .ThenInclude(fa => fa.Ator)
 					.First();
 
 				Console.WriteLine(filme);
 
 				foreach (var ator in filme.Atores)
 				{
-					Console.WriteLine(ator);
+					Console.WriteLine(ator.Ator);
 				}
             }
         }
