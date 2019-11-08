@@ -130,6 +130,10 @@
     <Compile Include="Dados\FilmeAtorConfiguration.cs" />
     <Compile Include="Dados\FilmeConfiguration.cs" />
     <Compile Include="Dados\IdiomaConfiguration.cs" />
+    <Compile Include="Migrations\20191108024937_Idioma.cs" />
+    <Compile Include="Migrations\20191108024937_Idioma.designer.cs">
+      <DependentUpon>20191108024937_Idioma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negocio\Idioma.cs" />
     <Compile Include="Extensions\DbContextExtensions.cs" />
     <Compile Include="Migrations\20191106024728_Inicial.cs" />
